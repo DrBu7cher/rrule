@@ -33,3 +33,5 @@ build/
 .test_coverage.dart
 
 coverage/
+
+.fvm/flutter_sdk

@@ -4,13 +4,15 @@ import 'package:meta/meta.dart';
 import '../../../frequency.dart';
 import '../../../recurrence_rule.dart';
 import '../../../utils.dart';
+import 'de.dart';
 import 'en.dart';
 
+export 'de.dart';
 export 'en.dart';
 
 /// Contains localized strings used by [RecurrenceRule.toText].
 ///
-/// Currently, only English is supported: [RruleL10nEn].
+/// Currently, only English and German are supported: [RruleL10nEn]. [RruleL10nDe].
 @immutable
 abstract class RruleL10n {
   const RruleL10n();
