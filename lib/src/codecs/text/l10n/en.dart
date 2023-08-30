@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:meta/meta.dart';
@@ -11,6 +13,11 @@ class RruleL10nEn extends RruleL10n {
 
   static Future<RruleL10nEn> create() async {
     await initializeDateFormatting('en');
+    return const RruleL10nEn._();
+  }
+
+  static RruleL10nEn createSync() {
+    unawaited(initializeDateFormatting('en'));
     return const RruleL10nEn._();
   }
 

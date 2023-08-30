@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:meta/meta.dart';
@@ -10,7 +12,12 @@ class RruleL10nDe extends RruleL10n {
   const RruleL10nDe._();
 
   static Future<RruleL10nDe> create() async {
-    await initializeDateFormatting('en');
+    await initializeDateFormatting('de');
+    return const RruleL10nDe._();
+  }
+
+  static RruleL10nDe createSync() {
+    unawaited(initializeDateFormatting('de'));
     return const RruleL10nDe._();
   }
 
@@ -79,9 +86,9 @@ class RruleL10nDe extends RruleL10n {
   String count(int count) {
     switch (count) {
       case 1:
-        return ', ein Mail';
+        return ', ein Mal';
       case 2:
-        return ', zwei Mail';
+        return ', zwei Mal';
       default:
         return ', $count Mal';
     }
